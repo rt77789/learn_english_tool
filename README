@@ -1,0 +1,14 @@
+auther : xiaoe (rt77789@163.com)
+Q: What I want?
+A: Learning English
+Q: What I need?
+A: Count the words, and predict which words I don't know.
+--------------------------------------------------------------------------------
+0. Download the target web page.
+1. Extract the main content of the page.
+2. Analyze the main content.
+	0. English segmentation
+	1. Plural to Singular
+	2. Remove the Stopwords
+	3. Predict remain words whether I knows
+4. Output the result.
