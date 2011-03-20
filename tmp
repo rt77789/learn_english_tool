@@ -1,0 +1,14 @@
+doc = Nokogiri::HTML(html_document)
+doc = Nokogiri::XML(xml_document)
+doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
+require 'open-uri'
+require 'nokogiri'
+ 
+doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
+doc.xpath('//h3/a').each do |node|
+  puts node.text
+end
+doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
+doc.css('h3.r &gt; a.l').each do |node|
+  puts node.text
+end
