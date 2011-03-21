@@ -1,14 +1,97 @@
-doc = Nokogiri::HTML(html_document)
-doc = Nokogiri::XML(xml_document)
-doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
-require 'open-uri'
-require 'nokogiri'
- 
-doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
-doc.xpath('//h3/a').each do |node|
-  puts node.text
-end
-doc = Nokogiri::HTML(open("http://www.google.com/search?q=doughnuts"))
-doc.css('h3.r &gt; a.l').each do |node|
-  puts node.text
-end
+
+		
+			vim 改变窗口的大小（：help vsp）得到的
+		
+		最快的方法：
+1改变高度：res +n（增加n行的高度）n+ctrl+w++
+2.改变宽度：vertical res +n（增加n列的宽度）n+ctrl+w+>
+6. 改变窗口大小                        *window-resize*
+*CTRL-W_=*
+CTRL-W =    使得所有窗口 (几乎) 等宽、等高，但当前窗口使用 'winheight' 和
+'winwidth'。
+置位 'winfixheight' 的窗口保持它们的高度，而置位 'winfixwidth'
+的窗口保持它们的宽度。
+:res[ize] -N                    *:res* *:resize* *CTRL-W_-*
+CTRL-W -    使得当前窗口高度减 N (默认值是 1)。
+如果在 'vertical' 之后使用，则使得宽度减 N。
+:res[ize] +N                    *CTRL-W_+*
+CTRL-W +    使得当前窗口高度加 N (默认值是 1)。
+如果在 'vertical' 之后使用，则使得宽度加 N。
+:res[ize] [N]
+CTRL-W CTRL-_                    *CTRL-W_CTRL-_* *CTRL-W__*
+CTRL-W _    设置当前窗口的高度为 N (默认值为最大可能高度)。
+z{nr}<CR>    设置当前窗口的高度为 {nr}。
+*CTRL-W_<*
+CTRL-W <    使得当前窗口宽度减 N (默认值是 1)。
+*CTRL-W_>*
+CTRL-W >    使得当前窗口宽度加 N (默认值是 1)。
+:vertical res[ize] [N]            *:vertical-resize* *CTRL-W_bar*
+CTRL-W |    设置当前窗口的宽度为 N (默认值为最大可能宽度)。
+你也可以用鼠标上下拖动状态行来改变窗口的高度，或者左右拖动垂直分割线来改变窗口
+宽度。这些功能只有在支持鼠标的版本里，并且设置了 'mouse' 选项才可以用。
+选项 'winheight' ('wh') 用来设置当前窗口的最小高度。每当其它窗口变为当前窗口的
+时候，这一选项就会生效。如果设置为 0，则禁用。把 'winheight' 设一个很大的值，
+例如，'9999'，就使得当前窗口永远占据尽可能大的空间。尽量设置成一个编辑时比较舒
+服的值，比如说，'10' 就是一个合理的值。
+同样，'winwidth' ('wiw') 选项设定了当前窗口的最小宽度。
+如果置位了 'equalalways' ('ea') 选项，在分割或者关闭窗口之后，所有窗口都会变为
+相同大小。如果你不置位这个选项，分割窗口时会减少当前窗口的大小，而其它窗口保持
+不变。当关闭窗口时，多出来的行会被上面的窗口占用。
+选项 'eadirection' 用来限制 'equalalways' 的作用方向。默认值是 "both"，两个方
+向都改变。当设置为 "ver" 时，只限制所有窗口的高度必须相同，这样你可以自己调节
+窗口的宽度。而垂直分割窗口的大小如果经过手工调整，其宽度也不会被破坏。同样，
+"hor" 使得窗口的宽度都相等。
+选项 'cmdheight' ('ch') 用来设置命令行的高度。如果你对 |hit-enter| 的提示信息
+感到厌烦，可以将它设置为 2 或 3。
+如果只有一个窗口，那么改变该窗口大小的同时也会改变命令行的高度。如果有多个窗
+口，那么改变当前窗口的大小也会改变它下面的窗口 (有时是上面的窗口) 的高度。
+一个窗口的最小高度和最小宽度可以用 'winminheight' 和 'winminwidth' 设定。这是
+硬性值，一旦设定，窗口的高度 (或宽度) 将不能小于该值。
+
+if ($ != jQuery) {
+	$ = jQuery.noConflict();
+}
+var isLogined = false;
+var cb_blogId = 80715;
+var cb_entryId = 1904946;
+var cb_blogApp = "Open_Source";
+var cb_blogUserGuid = "b891e341-3f05-e011-ac81-842b2b196315";
+var cb_entryCreatedDate = '2010/6/5 17:49:00';
+
+
+
+
+绿色通道：好文要顶关注我收藏该文与我联系
+
+
+
+
+
+
+
+
+
+
+
+										
+	 
+		
+	
+	 
+		
+	
+		
+		
+
+
+
+
+
+
+
+LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+GetPrevNextPost(cb_blogId, cb_entryCreatedDate);
+
+			posted on 2010-06-05 17:49 Hu Wenbiao 阅读(78) 评论(0)  编辑 收藏
+		
+	
